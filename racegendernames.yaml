@@ -78,7 +78,7 @@ Human:
     - Mordecai
     - Sylas
 
-    # ... more male human names
+    
   female:
     - Elowen
     - Isolde
@@ -870,101 +870,160 @@ Half-Elf:
 
 Half-Orc:
   male:
-    - Agzor
-    - Balgruuf
-    - Barak
-    - Bolg
-    - Brag
+    - Borak
+    - Borgak
+    - Bork
+    - Brak
+    - Brask
+    - Brug
+    - Brunk
     - Brog
-    - Dorg
-    - Drak
-    - Durak
+    - Drakar
+    - Drork
+    - Drok
     - Durg
-    - Farg
+    - Frak
+    - Garrosh
+    - Ghar
     - Gorg
-    - Grak
-    - Gul
-    - Gurm
-    - Hagruk
-    - Horg
-    - Jorag
-    - Karg
+    - Gornak
+    - Gorm
+    - Grem
+    - Grommash
+    - Gronk
+    - Grosh
+    - Grothar
+    - Grunk
+    - Grush
+    - Grusk
+    - Grish
+    - Grash
+    - Grukash
+    - Grukash
+    - Grukash
+    - Grukash
+    - Grukash
+    - Grusk
+    - Harg
+    - Harog
+    - Hrok
+    - Hrak
+    - Hrakar
+    - Hruk
+    - Jarg
+    - Krag
+    - Kralk
+    - Krash
+    - Krog
     - Krug
-    - Lorg
-    - Mok
+    - Krunk
+    - Kurk
+    - Lok
+    - Lokar
     - Morg
-    - Murg
+    - Murak
+    - Murk
     - Narg
-    - Nog
-    - Ogrum
-    - Org
-    - Orzag
+    - Narok
     - Rok
-    - Rog
-    - Ruk
-    - Shog
+    - Rurg
+    - Skar
     - Skrag
-    - Skug
-    - Snarg
-    - Snog
+    - Snar
+    - Thrak
+    - Thrash
+    - Throk
     - Throg
     - Thrug
-    - Ugluk
-    - Urok
-    - Urzog
-    - Vorg
-    - Wrog
-    - Yorg
-    - Zug
-    - Zorg
-    - Zurk
+    - Thruk
+    - Thurg
+    - Trork
+    - Trug
+    - Trog
+    - Urg
+    - Urgash
+    - Vrak
+    - Vruk
+    - Zark
 
   female:
-    - Agasha
-    - Balga
-    - Barshka
-    - Borga
-    - Brasha
-    - Brug
-    - Dagra
-    - Dorga
-    - Durka
-    - Farka
-    - Gagra
-    - Gorga
-    - Grakka
-    - Hagga
-    - Harka
-    - Jagga
-    - Kagra
-    - Karka
-    - Lagra
-    - Lorka
-    - Masha
-    - Morga
-    - Mugra
-    - Nagga
-    - Narka
-    - Orka
-    - Orzha
-    - Rarka
-    - Rashka
-    - Rogga
-    - Rorga
-    - Sarka
-    - Shagra
-    - Sharga
-    - Skagra
-    - Snorga
-    - Thraga
-    - Thrakka
-    - Traga
-    - Vorga
-    - Yagra
-    - Yorga
-    - Zagra
-    - Zorga
-    - Zurka
+    - Agasha 
+    - Bruga
+    - Griselda
+    - Thorka
+    - Hilda
+    - Draga
+    - Helga
+    - Krasha
+    - Orva
+    - Freya
+    - Greta
+    - Sigrun
+    - Brunhild
+    - Hulda
+    - Truda
+    - Ursa
+    - Thora
+    - Agna
+    - Gudrun
+    - Ragnhild
+    - Inga
+    - Bera
+    - Astrid
+    - Hilde
+    - Olga
+    - Ulrika
+    - Edda
+    - Solveig
+    - Gudrid
+    - Erika
+    - Svenja
+    - Ylva
+    - Signy
+    - Asdis
+    - Yrsa
+    - Valdis
+    - Brynhild
+    - Eir
+    - Vigdis
+    - Hildegarde
+    - Ragna
+    - Gunnhild
+    - Fritjofa
+    - Gudbjorg
+    - Svea
+    - Alfhild
+    - Hervor
+    - Ingrid
+    - Herdis
+    - Gullveig
+    - Gudveig
+    - Geirny
+    - Rannveig
+    - Thrym
+    - Hallgerda
+    - Eirny
+    - Skuld
+    - Hlif
+    - Geirny
+    - Rannveig
+    - Thrym
+    - Hallgerda
+    - Eirny
+    - Skuld
+    - Hlif
+    - Geirny
+    - Rannveig
+    - Thrym
+    - Hallgerda
+    - Eirny
+    - Skuld
+    - Hlif
+    - Thordis
+    - Hrothgarde
+    - Ingjerd
+    - Hjordis
+    - Svava
 
 Dragonborn:
   male:
