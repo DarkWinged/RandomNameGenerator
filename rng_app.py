@@ -13,22 +13,23 @@ def index():
 def names():
     ancestry = request.form.get('ancestry', 'Human').capitalize()
     gender = request.form.get('gender', 'male').lower()
+
     count_str = request.form.get('count', '5')
 
     if not count_str.isdigit():
         return redirect(url_for('index'))
 
     count = int(count_str)
+    
     if count <= 0 or count > 50:
         return redirect(url_for('index'))
+    if ancestry not in ['Human', 'Elf', 'Dwarf']:
+        return redirect(url_for('index'))
+    if gender not in ['male', 'female']:
+        return redirect(url_for('index'))
 
-    if ancestry not in ['Human', 'Elf', 'Dwarf']: return redirect(url_for('index'))
-    if gender not in ['male', 'female']: return redirect(url_for('index'))
-
-    # Here you'll handle the name generation based on the input criteria (ancestry, gender, count)
-    # For now, I'm returning a placeholder string
-    return 'To do: make a names.html and names.css'
+    return render_template('names.html', names=['boby'])
+  
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=2224, debug=True)
-
