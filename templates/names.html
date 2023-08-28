@@ -8,18 +8,18 @@
 </head>
 <body>
     <h1>Generated Fantasy Names</h1>
-    
-    <div id="character-list">
-        <ul>
-            {% for name in names %}
-                <li>{{ name }}</li>
-            {% endfor %}
-        </ul>
+
+    <div class="name-container">
+        <div id="character-list">
+            <ul>
+                {% for name in names %}
+                    <li>{{ name }}</li>
+                {% endfor %}
+            </ul>
+        </div>
+        <button onclick="location.reload();">Generate More Names</button>
+        <a href="/" class="return-link">Return to Fantasy Name Generator</a>
     </div>
-    
-    <footer>
-        <a href="/">Return to Fantasy Name Generator</a>
-    </footer>
 </body>
 </html>
 
