@@ -8,32 +8,32 @@
 </head>
 <body>
     <h1>Fantasy Name Generator</h1>
-    
+
     <form action="/names" method="POST">
         <label for="ancestry">Select Ancestry:</label>
         <select id="ancestry" name="ancestry">
             {% for ancestry in ancestries %}
-            <option value="{{ ancestry }}"> {{ ancestry }} </option>
+            <option value="{{ ancestry }}" {% if session.get('ancestry') == ancestry %}selected{% endif %}> {{ ancestry }} </option>
             {% endfor %}
         </select>
-        
+
         <label for="gender">Select Gender:</label>
         <select id="gender" name="gender">
-            <option value="male">Male</option>
-            <option value="female">Female</option>
+            <option value="male" {% if session.get('gender') == 'male' %}selected{% endif %}>Male</option>
+            <option value="female" {% if session.get('gender') == 'female' %}selected{% endif %}>Female</option>
         </select>
-        
+
         <label for="count">Number of Results:</label>
         <select id="count" name="count">
-            <option value="5">5</option>
-            <option value="10">10</option>
-            <option value="25">25</option>
-            <option value="50">50</option>
+            <option value="5" {% if session.get('count') == '5' %}selected{% endif %}>5</option>
+            <option value="10" {% if session.get('count') == '10' %}selected{% endif %}>10</option>
+            <option value="25" {% if session.get('count') == '25' %}selected{% endif %}>25</option>
+            <option value="50" {% if session.get('count') == '50' %}selected{% endif %}>50</option>
         </select>
-        
+
         <button type="submit">Generate Characters</button>
     </form>
-    
+
     <div id="character-list">
         <!-- Generated characters will be displayed here -->
     </div>
