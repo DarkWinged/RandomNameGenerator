@@ -14,7 +14,7 @@ def names():
     ancestry = request.form.get('ancestry', 'Human').capitalize()
     gender = request.form.get('gender', 'male').lower()
     count = int(request.form.get('count', '5'))
-    return 'To do: make a names.html and names.css'
+    return render_template('names.html', names=['boby'])
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port='2224', debug=True)
