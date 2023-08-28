@@ -5,48 +5,44 @@ from random import sample
 import yaml
 from flask import Flask, redirect, render_template, request, url_for
 
+# Initialize Flask application
 app = Flask(__name__)
 
 @app.route('/')
 def index():
+    # Display the main page with a dropdown of available ancestries.
     return render_template('index.html', ancestries=list(app.config['ancestry_generate'].keys()))
 
 @app.route('/names', methods=['POST'])
 def names():
+    # Retrieve user selections from form data.
     ancestry = request.form.get('ancestry', 'Human').capitalize()
-    
-    if '-' in ancestry:
-        parts = ancestry.split('-')
-        new_parts = []
-        for part in parts:
-            new_parts.append(part.capitalize())
-        ancestry = '-'.join(new_parts)
-
     gender = request.form.get('gender', 'male').lower()
-
     count_str = request.form.get('count', '5')
 
-    if not count_str.isdigit():
+    # Handle special case for ancestries with hyphens.
+    if '-' in ancestry:
+        parts = ancestry.split('-')
+        ancestry = '-'.join([part.capitalize() for part in parts])
+
+    # Input validations.
+    if not (count_str.isdigit() and (0 < int(count_str) <= 50) and
+            ancestry in app.config['ancestry_generate'] and
+            gender in ['male', 'female']):
         return redirect(url_for('index'))
 
-    count = int(count_str)
-    
-    if count <= 0 or count > 50:
-        return redirect(url_for('index'))
-    if ancestry not in list(app.config['ancestry_generate'].keys()):
-        return redirect(url_for('index'))
-    if gender not in ['male', 'female']:
-        return redirect(url_for('index'))
-                        
-    return render_template('names.html', names=generate_names_list(count, ancestry, gender))
+    # Render the names page with generated names.
+    return render_template('names.html', names=generate_names_list(int(count_str), ancestry, gender))
 
 def generate_names_list(count, ancestry, gender):
+    """
+    Fetch a random sample of names from the dataset based on given criteria.
+    """
     return sample(app.config['ancestry_generate'][ancestry][gender], count)
 
 if __name__ == '__main__':
+    # Load dataset and start Flask application.
     with open('racegendernames.yaml', 'r') as yaml_file:
-        ancestor_generate = yaml.safe_load(yaml_file)
-
-    app.config['ancestry_generate'] = ancestor_generate
-    
+        app.config['ancestry_generate'] = yaml.safe_load(yaml_file)
     app.run(host='0.0.0.0', port='2224', debug=True)
+
