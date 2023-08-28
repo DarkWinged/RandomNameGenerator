@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: rng-app-deployment
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: rng-app
+  template:
+    metadata:
+      labels:
+        app: rng-app
+    spec:
+      containers:
+        - name: rng-container
+          image: ghcr.io/darkwinged/randomnamegenerator/rng-app:1.0.0
+          ports:
+            - containerPort: 2224
+
