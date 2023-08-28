@@ -16,20 +16,22 @@ def data():
         data = yaml.safe_load(file)
         yield data
 
-def test_negative_or_zero_count_redirect(client):
-    response = client.post('/names', data={'count': -1, 'ancestry': 'Human', 'gender': 'male'})
-    assert response.status_code == 302  # Redirect status code
+def test_negative_or_zero_count_redirect(client, data):
+    for _ in range(5):  # Perform fuzz testing for half of the data
+        response = client.post('/names', data={'count': random.randint(-50, 0), 'ancestry': 'Human', 'gender': 'male'})
+        assert response.status_code == 302  # Redirect status code
 
 def test_large_count_redirect(client):
-    response = client.post('/names', data={'count': 1000, 'ancestry': 'Elf', 'gender': 'female'})
-    assert response.status_code == 302  # Redirect status code
+    for _ in range(5):  # Perform fuzz testing for half of the data
+        response = client.post('/names', data={'count': random.randint(51, 1000), 'ancestry': 'Elf', 'gender': 'female'})
+        assert response.status_code == 302  # Redirect status code
 
 def test_non_int_count_redirect(client):
     response = client.post('/names', data={'count': 'abc', 'ancestry': 'Dwarf', 'gender': 'male'})
     assert response.status_code == 302  # Redirect status code
 
 def test_invalid_ancestry_redirect(client):
-    response = client.post('/names', data={'count': 10, 'ancestry': 'Orc', 'gender': 'male'})
+    response = client.post('/names', data={'count': 5, 'ancestry': 'Drukhari', 'gender': 'male'})
     assert response.status_code == 302  # Redirect status code
 
 def test_non_bool_gender_redirect(client):
