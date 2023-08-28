@@ -7,6 +7,7 @@ import yaml
 @pytest.fixture
 def client():
     app.config['TESTING'] = True
+
     with app.test_client() as client:
         yield client
 
@@ -14,6 +15,7 @@ def client():
 def data():
     with open('racegendernames.yaml', 'r') as file:
         data = yaml.safe_load(file)
+        app.config['ancestry_generate'] = data
         yield data
 
 def test_negative_or_zero_count_redirect(client, data):
