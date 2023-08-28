@@ -13,7 +13,7 @@ def index():
 def names():
     ancestry = request.form.get('ancestry', 'Human').capitalize()
     gender = request.form.get('gender', 'male').lower()
-    results = int(request.form.get('results', '5'))
+    count = int(request.form.get('count', '5'))
     return 'To do: make a names.html and names.css'
 
 if __name__ == '__main__':
