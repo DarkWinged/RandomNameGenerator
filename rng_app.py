@@ -1,13 +1,14 @@
 #! /usr/bin/env python3
 # james rogers | james.levi.rogers@gmail.com
 
+import yaml
 from flask import Flask, redirect, render_template, request, url_for
 
 app = Flask(__name__)
 
 @app.route('/')
 def index():
-    return render_template('index.html', ancestries=['Human', 'Elf', 'Dwarf'])
+    return render_template('index.html', ancestries=list(app.config['ancestry_generate'].keys()))
 
 @app.route('/names', methods=['POST'])
 def names():
@@ -23,13 +24,18 @@ def names():
     
     if count <= 0 or count > 50:
         return redirect(url_for('index'))
-    if ancestry not in ['Human', 'Elf', 'Dwarf']:
+    if ancestry not in list(app.config['ancestry_generate'].keys()):
         return redirect(url_for('index'))
     if gender not in ['male', 'female']:
         return redirect(url_for('index'))
-
+                        
     return render_template('names.html', names=['boby'])
-  
+
 
 if __name__ == '__main__':
-    app.run(host='0.0.0.0', port=2224, debug=True)
+    with open('racegendernames.yaml', 'r') as yaml_file:
+        ancestor_generate = yaml.safe_load(yaml_file)
+
+    app.config['ancestry_generate'] = ancestor_generate
+    
+    app.run(host='0.0.0.0', port='2224', debug=True)
