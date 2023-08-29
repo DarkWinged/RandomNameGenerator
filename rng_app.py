@@ -1,4 +1,3 @@
-#! /usr/bin/env python3
 
 from random import sample
 import yaml
@@ -15,26 +14,25 @@ def check_names_endpoint():
     if request.endpoint is None:
         return redirect(url_for('index'))
 
-@app.before_request
-def check_names_endpoint():
-    if request.endpoint == None:
-        return  redirect(url_for('index'))
-
 @app.route('/')
 def index():
     # Retrieve stored choices from session, or use default values
     stored_ancestry = session.get('ancestry', 'Human')
     stored_gender = session.get('gender', 'male')
     stored_count = session.get('count', '5')
+    stored_prefix = session.get('prefix', '')
+    stored_suffix = session.get('suffix', '')
     return render_template('index.html',
                            ancestries=list(app.config['ancestry_generate'].keys()),
                            stored_ancestry=stored_ancestry,
                            stored_gender=stored_gender,
-                           stored_count=stored_count)
+                           stored_count=stored_count,
+                           stored_prefix=stored_prefix,
+                           stored_suffix=stored_suffix)
 
 @app.route('/names', methods=['POST'])
 def names():
-    # Retrieve user selections from form data.
+    # Retrieve user selections and prefix/suffix from form data.
     ancestry = request.form.get('ancestry', 'Human').capitalize()
     gender = request.form.get('gender', 'male').lower()
     count_str = request.form.get('count', '5')
@@ -52,13 +50,12 @@ def names():
             gender in ['male', 'female', 'non-binary']):
         return redirect(url_for('index'))
 
-    # Store user's choices in the session
+    # Store user's choices, prefix, and suffix in the session
     session['ancestry'] = ancestry
     session['gender'] = gender
     session['count'] = count_str
     session['prefix'] = prefix
     session['suffix'] = suffix
-    session.permanent = True  # Make sure the session lifetime is respected
 
     # Render the names page with generated names.
     return render_template('names.html', names=generate_names_list(int(count_str), ancestry, gender, prefix, suffix))
@@ -76,7 +73,7 @@ def generate_names_list(count, ancestry, gender, prefix, suffix):
         generated_names = sample(app.config['ancestry_generate'][ancestry][gender], count)
 
     # Apply prefix and suffix to each generated name
-    modified_names = [f"{prefix} {name} {suffix}" for name in generated_names]  # Add spaces
+    modified_names = [f"{prefix} {name} {suffix}" for name in generated_names]
     return modified_names
 
 if __name__ == '__main__':
@@ -84,6 +81,7 @@ if __name__ == '__main__':
     current_time = datetime.now().strftime("%Y-%m-%d %H:%M:%S.%f")
     secret_key = hashlib.sha256(current_time.encode()).hexdigest()
     app.config['SECRET_KEY'] = secret_key
+    #session.permanent = True
 
     # Load dataset and start Flask application.
     with open('racegendernames.yaml', 'r') as yaml_file:
