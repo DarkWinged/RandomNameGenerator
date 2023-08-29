@@ -1,0 +1,17 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: rng-app-ingress
+spec:
+  ingressClassName: nginx
+  rules:
+  - host: {{ BASEURL }}
+    http:
+      paths:
+      - backend:
+          service:
+            name: rng-app-service-dev
+            port:
+              number: 2224
+        path: / 
+        pathType: Prefix
