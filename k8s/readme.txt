@@ -1,4 +1,4 @@
-demo-ingress.j2:
+ingress.j2:
 
 This file defines an Ingress resource in Kubernetes, which allows external traffic to be routed to the appropriate services within the cluster.
 The apiVersion and kind specify the version and type of the resource being created.
