@@ -11,6 +11,11 @@ import hashlib
 app = Flask(__name__)
 app.config['PERMANENT_SESSION_LIFETIME'] = timedelta(minutes=15)  # <--- Set session expiration
 
+@app.before_request
+def check_names_endpoint():
+    if request.endpoint == None:
+        return  redirect(url_for('index'))
+
 @app.route('/')
 def index():
     # Retrieve stored choices from session, or use default values
