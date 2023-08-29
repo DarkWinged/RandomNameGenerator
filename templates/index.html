@@ -35,37 +35,37 @@
         <label for="prefix">Select Prefix:</label>
         <select id="prefix" name="prefix">
             <option value="">No Prefix</option>
-            <option value="Sir">Sir</option>
-            <option value="Lady">Lady</option>
-            <option value="Master">Master</option>
-            <option value="Lord">Lord</option>
-            <option value="Madam">Madam</option>
-            <option value="Mr.">Mr.</option>
-            <option value="Mrs.">Mrs.</option>
-            <option value="Ms.">Ms.</option>
-            <option value="Young">Young</option>
+            <option value="Sir" {% if session.get('prefix') == 'Sir' %}selected{% endif %}>Sir</option>
+            <option value="Lady" {% if session.get('prefix') == 'Lady' %}selected{% endif %}>Lady</option>
+            <option value="Master" {% if session.get('prefix') == 'Master' %}selected{% endif %}>Master</option>
+            <option value="Lord" {% if session.get('prefix') == 'Lord' %}selected{% endif %}>Lord</option>
+            <option value="Madam" {% if session.get('prefix') == 'Madam' %}selected{% endif %}>Madam</option>
+            <option value="Mr." {% if session.get('prefix') == 'Mr.' %}selected{% endif %}>Mr.</option>
+            <option value="Mrs." {% if session.get('prefix') == 'Mrs.' %}selected{% endif %}>Mrs.</option>
+            <option value="Ms." {% if session.get('prefix') == 'Ms.' %}selected{% endif %}>Ms.</option>
+            <option value="Young" {% if session.get('prefix') == 'Young' %}selected{% endif %}>Young</option>
         </select>
 
         <label for="suffix">Select Suffix:</label>
         <select id="suffix" name="suffix">
             <option value="">No Suffix</option>
-            <option value="Senior">Senior</option>
-            <option value="Junior">Junior</option>
-            <option value="the Second">the Second</option>
-            <option value="the Third">the Third</option>
-            <option value="the Brave">the Brave</option>
-            <option value="the Wise">the Wise</option>
-            <option value="the Boastful">the Boastful</option>
-            <option value="the Coward">the Coward</option>
-            <option value="the Timid">the Timid</option>
-            <option value="the DevOp">the DevOp</option>
-            <option value="the Burned">the Burned</option>
-            <option value="the Scorned">the Scorned</option>
-            <option value="the Kind">the Kind</option>
-            <option value="the Hermit">the Hermit</option>
-            <option value="the Feared">the Feared</option>
-            <option value="the Sneaky">the Sneaky</option>
-            <option value="the Scoundrel">the Scoundrel</option>
+            <option value="Senior" {% if session.get('suffix') == 'Senior' %}selected{% endif %}>Senior</option>
+            <option value="Junior" {% if session.get('suffix') == 'Junior' %}selected{% endif %}>Junior</option>
+            <option value="the Second" {% if session.get('suffix') == 'the Second' %}selected{% endif %}>the Second</option>
+            <option value="the Third" {% if session.get('suffix') == 'the Third' %}selected{% endif %}>the Third</option>
+            <option value="the Brave" {% if session.get('suffix') == 'the Brave' %}selected{% endif %}>the Brave</option>
+            <option value="the Wise" {% if session.get('suffix') == 'the Wise' %}selected{% endif %}>the Wise</option>
+            <option value="the Boastful" {% if session.get('suffix') == 'the Boastful' %}selected{% endif %}>the Boastful</option>
+            <option value="the Coward" {% if session.get('suffix') == 'the Coward' %}selected{% endif %}>the Coward</option>
+            <option value="the Timid" {% if session.get('suffix') == 'the Timid' %}selected{% endif %}>the Timid</option>
+            <option value="the DevOp" {% if session.get('suffix') == 'the DevOp' %}selected{% endif %}>the DevOp</option>
+            <option value="the Burned" {% if session.get('suffix') == 'the Burned' %}selected{% endif %}>the Burned</option>
+            <option value="the Scorned" {% if session.get('suffix') == 'the Scorned' %}selected{% endif %}>the Scorned</option>
+            <option value="the Kind" {% if session.get('suffix') == 'the Kind' %}selected{% endif %}>the Kind</option>
+            <option value="the Hermit" {% if session.get('suffix') == 'the Hermit' %}selected{% endif %}>the Hermit</option>
+            <option value="the Feared" {% if session.get('suffix') == 'the Feared' %}selected{% endif %}>the Feared</option>
+            <option value="the Sneaky" {% if session.get('suffix') == 'the Sneaky' %}selected{% endif %}>the Sneaky</option>
+            <option value="the Scoundrel" {% if session.get('suffix') == 'the Scoundrel' %}selected{% endif %}>the Scoundrel</option>
         </select>
 
         <button type="submit">Generate Characters</button>
