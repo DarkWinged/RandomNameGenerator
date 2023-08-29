@@ -11,6 +11,11 @@ import hashlib
 app = Flask(__name__)
 app.config['PERMANENT_SESSION_LIFETIME'] = timedelta(minutes=15)  # <--- Set session expiration
 
+@app.before_request
+def check_names_endpoint():
+    if request.endpoint == None:
+        return  redirect(url_for('index'))
+
 @app.route('/')
 def index():
     # Retrieve stored choices from session, or use default values
@@ -38,7 +43,7 @@ def names():
     # Input validations.
     if not (count_str.isdigit() and (0 < int(count_str) <= 50) and
             ancestry in app.config['ancestry_generate'] and
-            gender in ['male', 'female']):
+            gender in ['male', 'female', 'non-binary']):  # Add 'non-binary' here
         return redirect(url_for('index'))
 
     # Store user's choices in the session
@@ -54,7 +59,15 @@ def generate_names_list(count, ancestry, gender):
     """
     Fetch a random sample of names from the dataset based on given criteria.
     """
-    return sample(app.config['ancestry_generate'][ancestry][gender], count)
+    if gender == 'non-binary':
+        # Merge male and female names for non-binary option
+        male_names = app.config['ancestry_generate'][ancestry]['male']
+        female_names = app.config['ancestry_generate'][ancestry]['female']
+        non_binary_names = male_names + female_names
+        return sample(non_binary_names, count)
+    else:
+        # Return names based on the selected gender
+        return sample(app.config['ancestry_generate'][ancestry][gender], count)
 
 if __name__ == '__main__':
     # Generate the secret key
