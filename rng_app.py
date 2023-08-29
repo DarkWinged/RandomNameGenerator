@@ -1,20 +1,19 @@
 #! /usr/bin/env python3
-# james rogers | james.levi.rogers@gmail.com
 
 from random import sample
 import yaml
 from flask import Flask, redirect, render_template, request, url_for, session
-from datetime import datetime, timedelta  # <--- Added timedelta
+from datetime import datetime, timedelta
 import hashlib
 
 # Initialize Flask application
 app = Flask(__name__)
-app.config['PERMANENT_SESSION_LIFETIME'] = timedelta(minutes=15)  # <--- Set session expiration
+app.config['PERMANENT_SESSION_LIFETIME'] = timedelta(minutes=15)
 
 @app.before_request
 def check_names_endpoint():
-    if request.endpoint == None:
-        return  redirect(url_for('index'))
+    if request.endpoint is None:
+        return redirect(url_for('index'))
 
 @app.route('/')
 def index():
@@ -34,6 +33,8 @@ def names():
     ancestry = request.form.get('ancestry', 'Human').capitalize()
     gender = request.form.get('gender', 'male').lower()
     count_str = request.form.get('count', '5')
+    prefix = request.form.get('prefix', '')
+    suffix = request.form.get('suffix', '')
     
     # Handle special case for ancestries with hyphens.
     if '-' in ancestry:
@@ -43,31 +44,35 @@ def names():
     # Input validations.
     if not (count_str.isdigit() and (0 < int(count_str) <= 50) and
             ancestry in app.config['ancestry_generate'] and
-            gender in ['male', 'female', 'non-binary']):  # Add 'non-binary' here
+            gender in ['male', 'female', 'non-binary']):
         return redirect(url_for('index'))
 
     # Store user's choices in the session
     session['ancestry'] = ancestry
     session['gender'] = gender
     session['count'] = count_str
-    session.permanent = True  # <--- Make sure the session lifetime is respected
+    session['prefix'] = prefix
+    session['suffix'] = suffix
+    session.permanent = True  # Make sure the session lifetime is respected
 
     # Render the names page with generated names.
-    return render_template('names.html', names=generate_names_list(int(count_str), ancestry, gender))
+    return render_template('names.html', names=generate_names_list(int(count_str), ancestry, gender, prefix, suffix))
 
-def generate_names_list(count, ancestry, gender):
+def generate_names_list(count, ancestry, gender, prefix, suffix):
     """
     Fetch a random sample of names from the dataset based on given criteria.
     """
     if gender == 'non-binary':
-        # Merge male and female names for non-binary option
         male_names = app.config['ancestry_generate'][ancestry]['male']
         female_names = app.config['ancestry_generate'][ancestry]['female']
         non_binary_names = male_names + female_names
-        return sample(non_binary_names, count)
+        generated_names = sample(non_binary_names, count)
     else:
-        # Return names based on the selected gender
-        return sample(app.config['ancestry_generate'][ancestry][gender], count)
+        generated_names = sample(app.config['ancestry_generate'][ancestry][gender], count)
+
+    # Apply prefix and suffix to each generated name
+    modified_names = [f"{prefix} {name} {suffix}" for name in generated_names]  # Add spaces
+    return modified_names
 
 if __name__ == '__main__':
     # Generate the secret key
