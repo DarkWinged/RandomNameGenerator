@@ -21,6 +21,7 @@
         <select id="gender" name="gender">
             <option value="male" {% if session.get('gender') == 'male' %}selected{% endif %}>Male</option>
             <option value="female" {% if session.get('gender') == 'female' %}selected{% endif %}>Female</option>
+            <option value= "non-binary" {% if session.get('gender') == 'non-binary' %}selected{% endif %}>Non-Binary</option>
         </select>
 
         <label for="count">Number of Results:</label>
@@ -29,6 +30,42 @@
             <option value="10" {% if session.get('count') == '10' %}selected{% endif %}>10</option>
             <option value="25" {% if session.get('count') == '25' %}selected{% endif %}>25</option>
             <option value="50" {% if session.get('count') == '50' %}selected{% endif %}>50</option>
+        </select>
+
+        <label for="prefix">Select Prefix:</label>
+        <select id="prefix" name="prefix">
+            <option value="">No Prefix</option>
+            <option value="Sir">Sir</option>
+            <option value="Lady">Lady</option>
+            <option value="Master">Master</option>
+            <option value="Lord">Lord</option>
+            <option value="Madam">Madam</option>
+            <option value="Mr.">Mr.</option>
+            <option value="Mrs.">Mrs.</option>
+            <option value="Ms.">Ms.</option>
+            <option value="Young">Young</option>
+        </select>
+
+        <label for="suffix">Select Suffix:</label>
+        <select id="suffix" name="suffix">
+            <option value="">No Suffix</option>
+            <option value="Senior">Senior</option>
+            <option value="Junior">Junior</option>
+            <option value="the Second">the Second</option>
+            <option value="the Third">the Third</option>
+            <option value="the Brave">the Brave</option>
+            <option value="the Wise">the Wise</option>
+            <option value="the Boastful">the Boastful</option>
+            <option value="the Coward">the Coward</option>
+            <option value="the Timid">the Timid</option>
+            <option value="the DevOp">the DevOp</option>
+            <option value="the Burned">the Burned</option>
+            <option value="the Scorned">the Scorned</option>
+            <option value="the Kind">the Kind</option>
+            <option value="the Hermit">the Hermit</option>
+            <option value="the Feared">the Feared</option>
+            <option value="the Sneaky">the Sneaky</option>
+            <option value="the Scoundrel">the Scoundrel</option>
         </select>
 
         <button type="submit">Generate Characters</button>
