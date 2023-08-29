@@ -7,17 +7,23 @@ import yaml
 # Setup Flask test client
 @pytest.fixture
 def client():
+    # Set up the app for testing
     app.config['TESTING'] = True
     app.config['SECRET_KEY'] = 'test'
+
+    # Create a test client for making requests
     with app.test_client() as client:
         yield client
 
 # Load test data from the YAML file
 @pytest.fixture
 def data():
+    # Open the YAML file and load the data into the app's config, save to ancestry_generate key 
     with open('racegendernames.yaml', 'r') as file:
         data = yaml.safe_load(file)
         app.config['ancestry_generate'] = data
+       
+       # Yield the loaded data to the tests that use this fixture 
         yield data
 
 # Test redirection for negative or zero count input
