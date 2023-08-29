@@ -1,0 +1,201 @@
+apiVersion: v1
+data:
+  racegendernames.yaml: "Human:\n  male:\n    - John\n    - David\n    - Thoria\n
+    \   - Kaelen\n    - Eldric\n    - Darian\n    - Draven\n    - Thaddeus\n    -
+    Corin\n    - Gavric\n    - Finnian\n    - Alden\n    - Eamon\n    - Jareth\n    -
+    Loric\n    - Perrin\n    - Rowan\n    - Caelum\n    - Brynjar\n    - Kieran\n
+    \   - Varian\n    - Emeric\n    - Zephyr\n    - Seraphis\n    - Dorian\n    -
+    Galen\n    - Roderic\n    - Lucius\n    - Asher\n    - Thoren\n    - Garrick\n
+    \   - Calder\n    - Alaric\n    - Lysander\n    - Aric\n    - Malachai\n    -
+    Finnegan\n    - Ragnar\n    - Elion\n    - Driscoll\n    - Athan\n    - Alistair\n
+    \   - Zarek\n    - Eirik\n    - Theron\n    - Eldrick\n    - Leif\n    - Torin\n
+    \   - Beric\n    - Erevan\n    - Hadrian\n    - Kael\n    - Bramble\n    - Soren\n
+    \   - Galahad\n    - Korrin\n    - Ivar\n    - Bran\n    - Ronan\n    - Tavish\n
+    \   - Kaelum\n    - Elden\n    - Kaelin\n    - Thrain\n    - Evander\n    - Kalden\n
+    \   - Lorian\n    - Toric\n    - Gavriel\n    - Beren\n    - Alarion\n    - Eryndor\n
+    \   - Finnrick\n    - Elrik\n    - Keldan\n    - Mordecai\n    - Sylas\n\n    \n
+    \ female:\n    - Elowen\n    - Isolde\n    - Seraphina\n    - Lyanna\n    - Evelina\n
+    \   - Thalia\n    - Rowena\n    - Selene\n    - Freya\n    - Elysia\n    - Anwen\n
+    \   - Elara\n    - Arwyn\n    - Lirael\n    - Calista\n    - Maelle\n    - Isabeau\n
+    \   - Morwen\n    - Yvaine\n    - Astrid\n    - Elira\n    - Sabrina\n    - Leona\n
+    \   - Eowyn\n    - Fiora\n    - Seren\n    - Lavinia\n    - Evadne\n    - Elaria\n
+    \   - Isolyn\n    - Thessa\n    - Rowan\n    - Selena\n    - Aurora\n    - Elara\n
+    \   - Aeliana\n    - Faelia\n    - Orla\n    - Isolde\n    - Elowyn\n    - Aria\n
+    \   - Freyja\n    - Eilidh\n    - Maeve\n    - Calanthe\n    - Mirelle\n    -
+    Elysande\n    - Lyra\n    - Serilda\n    - Lilia\n    - Eliska\n    - Vaelora\n
+    \   - Thalassa\n    - Evelia\n    - Selira\n    - Isolind\n    - Rowenna\n    -
+    Lysandra\n    - Elariana\n    - Ariadne\n    - Elara\n    - Isabea\n    - Morwena\n
+    \   - Serapha\n    - Calanwen\n    - Fiorenza\n    - Ysabeau\n    - Astraea\n
+    \   - Eliria\n    - Sabra\n    - Leandra\n    - Eowenna\n    - Faelan\n    - Maelis\n
+    \   - Arianwen\n    - Isolda\n    - Lyanna\n    - Evandria\n    - Elaria\n    -
+    Thalindra\n\nElf:\n  male:\n    - Adran\n    - Aelar\n    - Aerendir\n    - Alaric\n
+    \   - Althaea\n    - Anoril\n    - Arannis\n    - Aricen\n    - Arion\n    - Arvel\n
+    \   - Beiro\n    - Beldir\n    - Caladrel\n    - Calanon\n    - Calasorn\n    -
+    Celemborn\n    - Celethor\n    - Cirdan\n    - Caelum\n    - Daithor\n    - Dioran\n
+    \   - Eledris\n    - Elionor\n    - Elrian\n    - Elthirion\n    - Erevan\n    -
+    Faenor\n    - Falael\n    - Faelar\n    - Galadron\n    - Galanodel\n    - Galathil\n
+    \   - Galenor\n    - Gildor\n    - Gilrian\n    - Haldir\n    - Halion\n    -
+    Ilidril\n    - Ilian\n    - Ilionar\n    - Ivandriel\n    - Ivellios\n    - Kelathor\n
+    \   - Kaelor\n    - Laenon\n    - Lanowar\n    - Larien\n    - Leandros\n    -
+    Lethil\n    - Liadrin\n    - Liathorn\n    - Maethor\n    - Malion\n    - Malithor\n
+    \   - Mithal\n    - Naerendel\n    - Naelor\n    - Orophin\n    - Ossian\n    -
+    Ralathor\n    - Raethorn\n    - Rilithar\n    - Saelion\n    - Selirien\n    -
+    Selorn\n    - Silandros\n    - Silasorn\n    - Talindor\n    - Talthorn\n    -
+    Thaloril\n    - Thandor\n    - Tharion\n    - Thelian\n    - Valandil\n    - Valerion\n
+    \   - Vanalith\n    - Virel\n    - Vorenthil\n    - Voronar\n    - Xaladon\n    -
+    Xandoril\n    - Xilithorn\n    - Yrion\n    - Zephyrion\n    - Zirael\n\n  female:\n
+    \   - Adriel\n    - Aeliana\n    - Aenaria\n    - Althaea\n    - Amalthea\n    -
+    Anarion\n    - Anwen\n    - Aralis\n    - Aranya\n    - Aricen\n    - Arwen\n
+    \   - Astrid\n    - Auriel\n    - Beladona\n    - Calanthe\n    - Calista\n    -
+    Celestia\n    - Celandra\n    - Celesse\n    - Ceryn\n    - Daenara\n    - Diora\n
+    \   - Eilistrae\n    - Elara\n    - Eledriel\n    - Elenwe\n    - Eliona\n    -
+    Elowyn\n    - Elura\n    - Elyndra\n    - Elysande\n    - Enidriel\n    - Eseldra\n
+    \   - Faelynn\n    - Falathiel\n    - Faeliana\n    - Galadriel\n    - Galanodel\n
+    \   - Galathil\n    - Gwendolyn\n    - Illyndra\n    - Ilyana\n    - Ivellia\n
+    \   - Keladry\n    - Korrina\n    - Laeris\n    - Lariel\n    - Leandria\n    -
+    Lirael\n    - Lirelia\n    - Maelora\n    - Maethoril\n    - Mirelle\n    - Myritha\n
+    \   - Naeris\n    - Naloria\n    - Nirel\n    - Ondine\n    - Ophelia\n    - Raelin\n
+    \   - Raethia\n    - Seraphina\n    - Syladriel\n    - Sylenia\n    - Taelira\n
+    \   - Talitha\n    - Thalara\n    - Thalindra\n    - Thalionel\n    - Valandria\n
+    \   - Valerian\n    - Virel\n    - Vorenthia\n    - Yavanna\n    - Ylithra\n    -
+    Ysaria\n    - Zephyrine\n    - Zirelia\n\n\nDwarf: \n  male:\n    - Adrik\n    -
+    Balin\n    - Bofur\n    - Borin\n    - Brokk\n    - Dain\n    - Dori\n    - Dwalin\n
+    \   - Dworic\n    - Eberk\n    - Einkil\n    - Farin\n    - Fili\n    - Furgas\n
+    \   - Gili\n    - Gimli\n    - Gralin\n    - Grindor\n    - Gundar\n    - Hadrik\n
+    \   - Hargrim\n    - Hogni\n    - Hundor\n    - Kili\n    - Lofar\n    - Lorin\n
+    \   - Mim\n    - Nain\n    - Nori\n    - Orin\n    - Orvar\n    - Radak\n    -
+    Ragnor\n    - Regar\n    - Thain\n    - Thalin\n    - Tharkor\n    - Thorin\n
+    \   - Thrain\n    - Thror\n    - Urgur\n    - Vagnor\n    - Vondal\n    - Vorgur\n
+    \   - Yirik\n    - Yogrim\n    - Zain\n    - Zarkor\n    - Zorlin\n    - Zundar\n
+    \   - Zurik\n    - Zvarak\n    - Zvarkor\n    - Zyrin\n    - Zyrn\n\n  female:\n
+    \   - Alva\n    - Balda\n    - Berda\n    - Berylla\n    - Brena\n    - Bruni\n
+    \   - Dagna\n    - Dalla\n    - Dina\n    - Dora\n    - Dvala\n    - Edda\n    -
+    Elga\n    - Elin\n    - Fenna\n    - Frida\n    - Gerta\n    - Gilda\n    - Glinna\n
+    \   - Gora\n    - Grelda\n    - Grinda\n    - Gunnloda\n    - Gurda\n    - Hilda\n
+    \   - Hlinna\n    - Inga\n    - Kelda\n    - Lina\n    - Milda\n    - Mina\n    -
+    Nessa\n    - Nora\n    - Orna\n    - Ragna\n    - Rinda\n    - Runa\n    - Selma\n
+    \   - Sif\n    - Sigrun\n    - Sigun\n    - Skelda\n    - Skina\n    - Svanhilda\n
+    \   - Svanna\n    - Thilda\n    - Thora\n    - Thruda\n    - Thurina\n    - Thurna\n
+    \   - Tylda\n    - Ulla\n    - Unna\n    - Varla\n    - Varona\n    - Vegga\n
+    \   - Velda\n    - Verna\n    - Vidra\n    - Vilda\n    - Vindra\n    - Ylva\n
+    \   - Yrga\n    - Yrsa\n    - Zinna\n    - Zorla\n\nHalfling:\n  male:\n    -
+    Alton\n    - Baggins\n    - Beren\n    - Bramble\n    - Brandy\n    - Cade\n    -
+    Caelum\n    - Corrin\n    - Dorian\n    - Eber\n    - Eldon\n    - Falco\n    -
+    Finn\n    - Frodo\n    - Galen\n    - Gerrin\n    - Hamfast\n    - Hamil\n    -
+    Harlan\n    - Heen\n    - Holman\n    - Isen\n    - Jago\n    - Kipp\n    - Lark\n
+    \   - Linus\n    - Lyle\n    - Marn\n    - Merric\n    - Milo\n    - Nilo\n    -
+    Nyles\n    - Ollam\n    - Osric\n    - Padgett\n    - Pippin\n    - Quill\n    -
+    Radley\n    - Reilly\n    - Rory\n    - Rowan\n    - Rufus\n    - Ryland\n    -
+    Samwise\n    - Solon\n    - Thistle\n    - Thrand\n    - Tigo\n    - Tilbo\n    -
+    Toby\n    - Tuck\n    - Ugo\n    - Ullin\n    - Urko\n    - Varro\n    - Vinco\n
+    \   - Waldo\n    - Wilbur\n    - Wiley\n    - Willard\n    - Willem\n    - Wylie\n
+    \   - Yago\n    - Zane\n    - Zayd\n    - Zinco\n\n  female:\n    - Alida\n    -
+    Bella\n    - Blossom\n    - Callie\n    - Clara\n    - Daisy\n    - Dottie\n    -
+    Elsie\n    - Emmie\n    - Faye\n    - Fern\n    - Flora\n    - Gilly\n    - Goldie\n
+    \   - Hattie\n    - Hazel\n    - Holly\n    - Ivy\n    - Juniper\n    - Lily\n
+    \   - Lottie\n    - Lucy\n    - Mabel\n    - Maisie\n    - Marigold\n    - Millie\n
+    \   - Minnie\n    - Molly\n    - Nellie\n    - Olive\n    - Opal\n    - Pansy\n
+    \   - Pearl\n    - Penny\n    - Petal\n    - Poppy\n    - Posie\n    - Primrose\n
+    \   - Rosie\n    - Ruby\n    - Sadie\n    - Saffron\n    - Sophie\n    - Stella\n
+    \   - Tansy\n    - Tilly\n    - Trudy\n    - Tulip\n    - Violet\n    - Willow\n
+    \   - Winnie\n    - Zara\n    - Zinnia\n\nGnome:\n  male:\n    - Alby\n    - Bimble\n
+    \   - Boddynock\n    - Buckle\n    - Chuckle\n    - Clang\n    - Clink\n    -
+    Digglen\n    - Dobb\n    - Duvamil\n    - Elmar\n    - Fargle\n    - Fiddle\n
+    \   - Filbert\n    - Fobble\n    - Fungus\n    - Glim\n    - Glimmer\n    - Glint\n
+    \   - Gralden\n    - Glimmer\n    - Glint\n    - Glimwick\n    - Glimzip\n    -
+    Glitter\n    - Gnarl\n    - Gobble\n    - Goffen\n    - Goober\n    - Grumble\n
+    \   - Gubble\n    - Humble\n    - Inky\n    - Jibber\n    - Jug\n    - Kellen\n
+    \   - Kip\n    - Klug\n    - Leif\n    - Lurk\n    - Lurk\n    - Mardle\n    -
+    Miggim\n    - Miggledy\n    - Nackle\n    - Nim\n    - Noodle\n    - Nuckle\n
+    \   - Nugget\n    - Nuk\n    - Nurt\n    - Nustle\n    - Oomph\n    - Phuddle\n
+    \   - Pog\n    - Quibble\n    - Racket\n    - Rinkle\n    - Ruddle\n    - Ruff\n
+    \   - Rumble\n    - Rustle\n    - Scuff\n    - Scuttle\n    - Shine\n    - Slack\n
+    \   - Slipp\n    - Spark\n    - Splendid\n    - Splint\n    - Spug\n    - Stug\n
+    \   - Thud\n    - Thunder\n    - Tickle\n    - Tock\n    - Waldo\n    - Wobble\n
+    \   - Wump\n    - Zook\n\n  female:\n    - Alabaster\n    - Bebop\n    - Bink\n
+    \   - Bixie\n    - Breezly\n    - Bubble\n    - Bumble\n    - Bunji\n    - Chica\n
+    \   - Chickpea\n    - Cinnamon\n    - Crimp\n    - Dizzy\n    - Doodle\n    -
+    Echo\n    - Fiddlesticks\n    - Fidget\n    - Fizzle\n    - Flutter\n    - Frizzle\n
+    \   - Gidget\n    - Gingersnap\n    - Gizmo\n    - Glimmer\n    - Glimpse\n    -
+    Glint\n    - Glitter\n    - Glow\n    - Gobble\n    - Gossamer\n    - Hush\n    -
+    Jingle\n    - Jinx\n    - Kibbles\n    - Kookie\n    - Lark\n    - Loop\n    -
+    Lullaby\n    - Marbles\n    - Mischief\n    - Niblet\n    - Noodle\n    - Nudge\n
+    \   - Peeper\n    - Pickles\n    - Pippin\n    - Puddle\n    - Quirk\n    - Radiance\n
+    \   - Ripple\n    - Sassy\n    - Sizzle\n    - Skittles\n    - Snicker\n    -
+    Snuggle\n    - Sparkle\n    - Sprinkle\n    - Squiggle\n    - Squeak\n    - Starshine\n
+    \   - Sugar\n    - Sunshine\n    - Sweets\n    - Swizzle\n    - Tink\n    - Tinsel\n
+    \   - Tipsy\n    - Tootsie\n    - Twig\n    - Twinkle\n    - Whimsy\n    - Wiggle\n
+    \   - Wink\n    - Zephyr\n\nHalf-Elf: \n  male:\n    - Adran\n    - Aelar\n    -
+    Alaric\n    - Ander\n    - Arannis\n    - Aricen\n    - Beiro\n    - Beric\n    -
+    Caladrel\n    - Celemborn\n    - Daelin\n    - Dalian\n    - Darien\n    - Elionor\n
+    \   - Erevan\n    - Faenor\n    - Faelar\n    - Galadron\n    - Gildor\n    -
+    Haelen\n    - Halion\n    - Illyndra\n    - Ilian\n    - Ilionar\n    - Ivandriel\n
+    \   - Ivellios\n    - Jareth\n    - Kaelen\n    - Kelathor\n    - Laenon\n    -
+    Leandros\n    - Lirael\n    - Lorian\n    - Maethor\n    - Malachai\n    - Malion\n
+    \   - Maron\n    - Mithal\n    - Naelor\n    - Naerendel\n    - Nain\n    - Orophin\n
+    \   - Ralathor\n    - Raethorn\n    - Rilithar\n    - Rowan\n    - Ryland\n    -
+    Saelion\n    - Selorn\n    - Silandros\n    - Talindor\n    - Thaloril\n    -
+    Thandor\n    - Tharion\n    - Thelian\n    - Valandil\n    - Valerion\n    - Vanalith\n
+    \   - Virel\n    - Vorenthil\n    - Yrion\n    - Zephyrion\n\n  female:\n    -
+    Adriel\n    - Aeliana\n    - Aenaria\n    - Alira\n    - Althaea\n    - Amalthea\n
+    \   - Anara\n    - Aranel\n    - Aranya\n    - Aricen\n    - Arista\n    - Arya\n
+    \   - Auriel\n    - Belara\n    - Calista\n    - Celestia\n    - Cora\n    - Daelia\n
+    \   - Dariana\n    - Dovanna\n    - Eilistrae\n    - Elara\n    - Eliona\n    -
+    Elowen\n    - Eluria\n    - Elysia\n    - Emara\n    - Faeliana\n    - Galadriel\n
+    \   - Gwendolyn\n    - Illyndra\n    - Ilyana\n    - Ivellia\n    - Jareth\n    -
+    Kaena\n    - Kaelen\n    - Korrina\n    - Leliana\n    - Lirael\n    - Lirelia\n
+    \   - Maelora\n    - Marigold\n    - Mirelle\n    - Naelora\n    - Nirel\n    -
+    Ondine\n    - Raelia\n    - Raelin\n    - Raina\n    - Selene\n    - Seraphina\n
+    \   - Syladriel\n    - Sylenia\n    - Talindra\n    - Thalara\n    - Thariana\n
+    \   - Valara\n    - Valeria\n    - Virel\n    - Yavanna\n    - Ysaria\n    - Zephyrine\n\nHalf-Orc:\n
+    \ male:\n    - Borak\n    - Borgak\n    - Bork\n    - Brak\n    - Brask\n    -
+    Brug\n    - Brunk\n    - Brog\n    - Drakar\n    - Drork\n    - Drok\n    - Durg\n
+    \   - Frak\n    - Garrosh\n    - Ghar\n    - Gorg\n    - Gornak\n    - Gorm\n
+    \   - Grem\n    - Grommash\n    - Gronk\n    - Grosh\n    - Grothar\n    - Grunk\n
+    \   - Grush\n    - Grusk\n    - Grish\n    - Grash\n    - Grukash\n    - Grukash\n
+    \   - Grukash\n    - Grukash\n    - Grukash\n    - Grusk\n    - Harg\n    - Harog\n
+    \   - Hrok\n    - Hrak\n    - Hrakar\n    - Hruk\n    - Jarg\n    - Krag\n    -
+    Kralk\n    - Krash\n    - Krog\n    - Krug\n    - Krunk\n    - Kurk\n    - Lok\n
+    \   - Lokar\n    - Morg\n    - Murak\n    - Murk\n    - Narg\n    - Narok\n    -
+    Rok\n    - Rurg\n    - Skar\n    - Skrag\n    - Snar\n    - Thrak\n    - Thrash\n
+    \   - Throk\n    - Throg\n    - Thrug\n    - Thruk\n    - Thurg\n    - Trork\n
+    \   - Trug\n    - Trog\n    - Urg\n    - Urgash\n    - Vrak\n    - Vruk\n    -
+    Zark\n\n  female:\n    - Agasha \n    - Bruga\n    - Griselda\n    - Thorka\n
+    \   - Hilda\n    - Draga\n    - Helga\n    - Krasha\n    - Orva\n    - Freya\n
+    \   - Greta\n    - Sigrun\n    - Brunhild\n    - Hulda\n    - Truda\n    - Ursa\n
+    \   - Thora\n    - Agna\n    - Gudrun\n    - Ragnhild\n    - Inga\n    - Bera\n
+    \   - Astrid\n    - Hilde\n    - Olga\n    - Ulrika\n    - Edda\n    - Solveig\n
+    \   - Gudrid\n    - Erika\n    - Svenja\n    - Ylva\n    - Signy\n    - Asdis\n
+    \   - Yrsa\n    - Valdis\n    - Brynhild\n    - Eir\n    - Vigdis\n    - Hildegarde\n
+    \   - Ragna\n    - Gunnhild\n    - Fritjofa\n    - Gudbjorg\n    - Svea\n    -
+    Alfhild\n    - Hervor\n    - Ingrid\n    - Herdis\n    - Gullveig\n    - Gudveig\n
+    \   - Geirny\n    - Rannveig\n    - Thrym\n    - Hallgerda\n    - Eirny\n    -
+    Skuld\n    - Hlif\n    - Geirny\n    - Rannveig\n    - Thrym\n    - Hallgerda\n
+    \   - Eirny\n    - Skuld\n    - Hlif\n    - Geirny\n    - Rannveig\n    - Thrym\n
+    \   - Hallgerda\n    - Eirny\n    - Skuld\n    - Hlif\n    - Thordis\n    - Hrothgarde\n
+    \   - Ingjerd\n    - Hjordis\n    - Svava\n\nDragonborn:\n  male:\n    - Arjhan\n
+    \   - Balasar\n    - Baradad\n    - Belgos\n    - Bhelzar\n    - Charuk\n    -
+    Cravash\n    - Dharvash\n    - Dhaunor\n    - Draegon\n    - Drukarn\n    - Drushar\n
+    \   - Durmash\n    - Ekmor\n    - Farkar\n    - Garadun\n    - Garash\n    - Ghesh\n
+    \   - Havarth\n    - Ishan\n    - Jarak\n    - Jharak\n    - Kavaran\n    - Kharash\n
+    \   - Kryntar\n    - Lirash\n    - Marovar\n    - Mharash\n    - Narak\n    -
+    Orin\n    - Oskar\n    - Pashar\n    - Praxor\n    - Qoril\n    - Quarkar\n    -
+    Rathor\n    - Rhothar\n    - Sargax\n    - Sharak\n    - Skoros\n    - Tarkar\n
+    \   - Tharash\n    - Thraxor\n    - Thrushar\n    - Ulmash\n    - Urnash\n    -
+    Varkar\n    - Vharash\n    - Vorgar\n    - Vroshar\n    - Vurash\n    - Wyrnar\n
+    \   - Xavryn\n    - Xorash\n    - Yrakar\n    - Yrashar\n    - Zarkor\n    - Zharak\n\n
+    \ female:\n    - Arjhan\n    - Balasar\n    - Baradad\n    - Belgos\n    - Bhelzar\n
+    \   - Charuk\n    - Cravash\n    - Dharvash\n    - Dhaunor\n    - Draegon\n    -
+    Drukarn\n    - Drushar\n    - Durmash\n    - Ekmor\n    - Farkar\n    - Garadun\n
+    \   - Garash\n    - Ghesh\n    - Havarth\n    - Ishan\n    - Jarak\n    - Jharak\n
+    \   - Kavaran\n    - Kharash\n    - Kryntar\n    - Lirash\n    - Marovar\n    -
+    Mharash\n    - Narak\n    - Orin\n    - Oskar\n    - Pashar\n    - Praxor\n    -
+    Qoril\n    - Quarkar\n    - Rathor\n    - Rhothar\n    - Sargax\n    - Sharak\n
+    \   - Skoros\n    - Tarkar\n    - Tharash\n    - Thraxor\n    - Thrushar\n    -
+    Ulmash\n    - Urnash\n    - Varkar\n    - Vharash\n    - Vorgar\n    - Vroshar\n
+    \   - Vurash\n    - Wyrnar\n    - Xavryn\n    - Xorash\n    - Yrakar\n    - Yrashar\n
+    \   - Zarkor\n    - Zharak\n"
+kind: ConfigMap
+metadata:
+  name: racegendernames
+  namespace: default

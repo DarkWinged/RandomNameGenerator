@@ -17,4 +17,11 @@ spec:
           image: ghcr.io/darkwinged/randomnamegenerator/rng-app:1.0.0
           ports:
             - containerPort: 2224
-
+          volumeMounts:
+            - name: data-volume
+              mountPath: /app/racegendernames.yaml # Adjust the mount path
+              subPath: racegendernames.yaml
+      volumes:
+        - name: data-volume
+          configMap:
+            name: racegendernames
