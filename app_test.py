@@ -8,7 +8,7 @@ import yaml
 @pytest.fixture
 def client():
     app.config['TESTING'] = True
-
+    app.config['SECRET_KEY'] = 'test'
     with app.test_client() as client:
         yield client
 
