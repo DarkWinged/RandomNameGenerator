@@ -1,7 +1,7 @@
 # Create a group of targets called "k8nodes"
 upstream k8nodes {
-  server node-1:30142; # <-- REPLACE NODE_PORT with the HTTPS nodePort
-  server node-2:30142; # <-- REPLACE NODE_PORT with the HTTPS nodePort
+  server node-1:32389;
+  server node-2:32389;
 }
 
 server {
@@ -15,6 +15,4 @@ server {
     proxy_set_header Host $http_host;
   }
 }
-
-
-#sudo mv ~/RandomNameGenerator/k8s/nginx-ingress /etc/nginx/sites-enabled/
+    
