@@ -9,7 +9,6 @@ import yaml
 def client():
     # Set up the app for testing
     app.config['TESTING'] = True
-    app.config['SECRET_KEY'] = 'test'
 
     # Create a test client for making requests
     with app.test_client() as client:
@@ -28,7 +27,7 @@ def data():
 
 # Test redirection for negative or zero count input
 def test_negative_or_zero_count_redirect(client, data):
-    for _ in range(5): #Perform fuzz testing for half of the data
+    for _ in range(5): # Perform fuzz testing for half of the data
         response = client.post('/names', data={'count': random.randint(-50, 0), 'ancestry': 'Human', 'gender': 'male'})
         assert response.status_code == 302 # Redirect status code
 
