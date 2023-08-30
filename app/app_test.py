@@ -19,7 +19,7 @@ def client():
 @pytest.fixture
 def data():
     # Open the YAML file and load the data into the app's config, save to ancestry_generate key 
-    with open('racegendernames.yaml', 'r') as file:
+    with open('names.yaml', 'r') as file:
         data = yaml.safe_load(file)
         app.config['ancestry_generate'] = data
        
