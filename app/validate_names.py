@@ -2,7 +2,7 @@ import random
 import yaml
 
 # Load race and gender-specific names from YAML file
-with open('racegendernames.yaml', 'r') as file:
+with open('names.yaml', 'r') as file:
     race_names = yaml.safe_load(file)
 
 # Function to generate a random name based on race and gender
