@@ -82,7 +82,6 @@ if __name__ == '__main__':
     current_time = datetime.now().strftime("%Y-%m-%d %H:%M:%S.%f")
     secret_key = hashlib.sha256(current_time.encode()).hexdigest()
     app.config['SECRET_KEY'] = secret_key
-    #session.permanent = True
 
     # Load dataset and start Flask application.
     with open('names.yaml', 'r') as yaml_file:
