@@ -15,5 +15,5 @@ kubectl apply -f deploy.yaml
 echo applying expose.yaml
 kubectl apply -f expose.yaml
 echo applying ingress.yaml
-sleep 15
+sleep 20
 kubectl apply -f ingress.yaml
