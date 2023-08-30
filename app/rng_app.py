@@ -1,3 +1,4 @@
+#! /usr/bin/env python3
 
 from random import sample
 import yaml
@@ -84,7 +85,7 @@ if __name__ == '__main__':
     #session.permanent = True
 
     # Load dataset and start Flask application.
-    with open('racegendernames.yaml', 'r') as yaml_file:
+    with open('names.yaml', 'r') as yaml_file:
         app.config['ancestry_generate'] = yaml.safe_load(yaml_file)
     app.run(host='0.0.0.0', port='2224', debug=True)
 
